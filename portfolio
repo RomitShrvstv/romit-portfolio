@@ -1,0 +1,202 @@
+import React from 'react';
+import { ExternalLink, Mail, Phone, Linkedin, Github } from 'lucide-react';
+
+const Portfolio = () => {
+  return (
+    <div className="min-h-screen bg-slate-50">
+      {/* Hero Section - Same as before */}
+      <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl font-bold mb-4">Romit Shrivastava</h1>
+          <p className="text-xl mb-6">Product Manager & Growth Specialist</p>
+          <div className="flex flex-wrap gap-4">
+            <a href="mailto:romitrajeshshrivastava@gmail.com" className="flex items-center gap-2 text-white hover:text-blue-200">
+              <Mail size={20} /> Email
+            </a>
+            <a href="tel:+919324244255" className="flex items-center gap-2 text-white hover:text-blue-200">
+              <Phone size={20} /> +91 9324244255
+            </a>
+            <a href="https://linkedin.com/in/romit-shrivastava" className="flex items-center gap-2 text-white hover:text-blue-200">
+              <Linkedin size={20} /> LinkedIn
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-6 py-12">      
+        {/* Summary Section - Same as before */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-700 mb-4">
+            Product Manager with expertise in growth, analytics, and data-driven decision making. 
+            Founder of MVPtoPMF Growth Agency, helping startups scale from MVP to Product-Market Fit. 
+            Proven track record of improving key metrics and driving user engagement across multiple products.
+          </p>
+        </section>
+
+        {/* Experience Section - Updated */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6">Product Experience</h2>
+          
+          <div className="space-y-8">
+            {/* Cuemath */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold">Product Management Intern</h3>
+                <span className="text-gray-600">Cuemath</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Improved Scorable to Scored lead metric from 38% to 62% in 3 months</li>
+                <li>Achieved 10x increase in Traffic to Qualified Lead conversion (0.012% to 0.12%)</li>
+                <li>Led cross-functional teams to execute growth experiments resulting in 10x increase in engagement</li>
+              </ul>
+            </div>
+
+            {/* Wells Fargo */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold">AVP-Product Analytics Consultant</h3>
+                <span className="text-gray-600">Wells Fargo</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Designed 30-step framework for customer remediation, reducing resolution time</li>
+                <li>Led largest remediation project addressing 120+ Add-on Products</li>
+                <li>Reduced testing time from 24 to 10 days through process optimization</li>
+              </ul>
+            </div>
+
+            {/* Testline - Added */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold">Product Growth</h3>
+                <span className="text-gray-600">Testline EdTech Startup</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Scaled daily active users from 500 to 3,500 through user-centric growth strategies</li>
+                <li>Improved Day-1 retention to 40% and Week-1 retention to 33% by identifying the North Star metric</li>
+                <li>Increased revenue by 10% through the launch of Expert Guidance as a value ladder</li>
+                <li>Achieved 1,000 daily app downloads through strategic management of paid and organic channels</li>
+              </ul>
+            </div>
+
+            {/* Zywa */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold">Product Growth Intern</h3>
+                <span className="text-gray-600">Zywa (YC W22)</span>
+              </div>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Reduced signup and KYC flow drop-offs by 15%</li>
+                <li>Enhanced engagement by 10% through UX improvements</li>
+                <li>Optimized ad campaign conversion rates by 10%</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section - Same as before */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6">Skills & Expertise</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-4">Product Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  'Data-Driven Decision Making',
+                  'Strategic Product Roadmaps',
+                  'Customer Obsession',
+                  'Marketplace Growth',
+                  'A/B Testing',
+                  'CRO'
+                ].map(skill => (
+                  <span key={skill} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-4">Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  'Leadsquared',
+                  'WebEngage',
+                  'Firebase',
+                  'Mixpanel',
+                  'SQL',
+                  'Figma'
+                ].map(tool => (
+                  <span key={tool} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section - Updated */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6">Notable Projects</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">MVPtoPMF Growth Agency | Founder</h3>
+              <div className="text-gray-700 space-y-2">
+                <p>Built and launched a specialized growth agency focused on helping early-stage startups transition from MVP to Product-Market Fit.</p>
+                <ul className="list-disc list-inside">
+                  <li>Developed comprehensive frameworks for customer discovery and market validation</li>
+                  <li>Successfully guided 3 clients through value proposition refinement and ICP development</li>
+                  <li>Created customized growth strategies aligned with each client's unique market position</li>
+                  <li>Implemented data-driven approaches to identify and optimize ideal growth channels</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">EasyCompany | Co-founder</h3>
+              <div className="text-gray-700 space-y-2">
+                <p>Led a startup initiative that secured 2nd place at the Hult Prize Startup competition among 25+ participants.</p>
+                <ul className="list-disc list-inside">
+                  <li>Spearheaded complete business development from ideation to execution</li>
+                  <li>Developed comprehensive business model and growth strategy</li>
+                  <li>Pitched successfully to NITK Alumni network for potential VC funding</li>
+                  <li>Managed cross-functional team through product development and market validation phases</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section - Same as before */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6">Education</h2>
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-lg font-semibold">BTech</h3>
+                <p className="text-gray-700">National Institute of Technology, Karnataka</p>
+              </div>
+              <span className="text-gray-600">2019 - 2023</span>
+            </div>
+            <div className="mt-4">
+              <p className="text-gray-700">
+                • Marketing Lead - ACM NITK<br />
+                • Senior Consultant - 180 DC NITK<br />
+                • Published research in Elsevier on Perovskites-based Solar Cells
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 py-8 mt-12">
+        <div className="max-w-4xl mx-auto px-6 text-center text-gray-600">
+          <p>© 2024 Romit Shrivastava. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Portfolio;
